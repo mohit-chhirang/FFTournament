@@ -42,6 +42,8 @@ export interface TournamentConfig {
   entryFee: string;
   prizePool: string;
   tournamentDate: string;
+  countdownTarget: string;
+  countdownLabel: string;
   registrationStatus: RegistrationStatus;
   registrationUrl: string;
   colleges: {

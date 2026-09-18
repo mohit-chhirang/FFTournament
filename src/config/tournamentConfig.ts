@@ -29,6 +29,10 @@ export const tournamentConfig: TournamentConfig = {
   entryFee: "[TO BE ANNOUNCED]",
   prizePool: "[TO BE ANNOUNCED]",
   tournamentDate: "[TO BE ANNOUNCED]",
+  // Countdown target — ISO 8601 date-time string in IST (UTC+05:30)
+  // Set to empty string "" to hide the countdown timer
+  countdownTarget: "2026-09-23T22:00:00+05:30",
+  countdownLabel: "REGISTRATION CLOSES IN",
   
   // Status options: 'open' | 'closed' | 'live' | 'completed'
   registrationStatus: 'open',

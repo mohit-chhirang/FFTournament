@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Trophy, ChevronRight, Flame, Target } from 'lucide-react';
 import { tournamentConfig } from '../../config/tournamentConfig';
 import { StatusBadge } from '../common/StatusBadge';
+import { CountdownTimer } from '../common/CountdownTimer';
 
 export const HeroSection: React.FC = () => {
   return (
@@ -70,9 +71,20 @@ export const HeroSection: React.FC = () => {
         </p>
 
         <p className="text-slate-400 text-sm sm:text-base max-w-xl mx-auto mb-8 leading-relaxed">
-          The official inter-institute Free Fire & Free Fire MAX clash between NIT Kurukshetra and NIT Jalandhar.
+          The official inter-institute Free Fire &amp; Free Fire MAX clash between NIT Kurukshetra and NIT Jalandhar.
           Gather your squad and compete for collegiate glory.
         </p>
+
+        {/* Countdown Timer */}
+        {tournamentConfig.countdownTarget && (
+          <div className="mb-10">
+            <CountdownTimer
+              targetDate={tournamentConfig.countdownTarget}
+              label={tournamentConfig.countdownLabel}
+              variant="hero"
+            />
+          </div>
+        )}
 
         {/* Action CTAs */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-14">

@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Flame, ShieldAlert, ArrowRight, CheckCircle2 } from 'lucide-react';
 import { tournamentConfig } from '../../config/tournamentConfig';
+import { CountdownTimer } from '../common/CountdownTimer';
 
 export const RegistrationBanner: React.FC = () => {
   return (
@@ -58,6 +59,17 @@ export const RegistrationBanner: React.FC = () => {
               <ShieldAlert className="w-4 h-4 text-amber-400 shrink-0" />
               <span>Only the team captain needs to register.</span>
             </div>
+
+            {/* Compact countdown */}
+            {tournamentConfig.countdownTarget && (
+              <div className="pt-1">
+                <CountdownTimer
+                  targetDate={tournamentConfig.countdownTarget}
+                  label={tournamentConfig.countdownLabel}
+                  variant="compact"
+                />
+              </div>
+            )}
           </div>
 
         </div>
